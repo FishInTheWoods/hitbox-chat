@@ -65,7 +65,7 @@ HitboxChatClient.prototype = {
       var i = -1;
       (function next() {
         i = (i + 1) % servers.length;
-        var sock = socketio_client.connect("http://" + servers[i].server_ip, { timeout: 5000 });
+        var sock = socketio_client.connect("http://" + servers[i].server_ip, { timeout: 5000, 'force new connection': true });
         sock.on("connect", t.onconnect.bind(t, sock));
         sock.on("connect_timeout", next);
         sock.on("error", next);
