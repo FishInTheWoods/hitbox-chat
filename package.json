@@ -1,8 +1,8 @@
 {
   "name": "hitbox-chat",
-  "version": "0.1.5",
-  "description": "A chat client library for hitbox.tv",
-  "author": "tsholmes",
+  "version": "1.0.0",
+  "description": "A chat client library for smashcast.tv, formerly known as hitbox.tv",
+  "author": "ugarcia",
   "license": "BSD-2-Clause",
   "engines": [
     "node >= 0.10.0"
@@ -13,6 +13,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/tsholmes/hitbox-chat.git"
+    "url": "http://github.com/FishInTheWoods/hitbox-chat.git"
   }
 }
