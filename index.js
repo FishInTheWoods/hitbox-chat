@@ -60,12 +60,12 @@ HitboxChatClient.prototype = {
   },
   open: function() {
     var t = this;
-    utils.safeGet("http://www.hitbox.tv/api/chat/servers?redis=true", function(body){
+    utils.safeGet("https://api.smashcast.tv/chat/servers", function(body){
       var servers = JSON.parse(body);
       var i = -1;
       (function next() {
         i = (i + 1) % servers.length;
-        var sock = socketio_client.connect("http://" + servers[i].server_ip, { timeout: 5000, 'force new connection': true });
+        var sock = socketio_client("https://" + servers[i].server_ip, { transports: ['websocket'], timeout: 5000, 'force new connection': true });
         sock.on("connect", t.onconnect.bind(t, sock));
         sock.on("connect_timeout", next);
         sock.on("error", next);
