@@ -61,7 +61,15 @@ HitboxChatClient.prototype = {
   open: function() {
     var t = this;
     utils.safeGet("https://api.smashcast.tv/chat/servers", function(body){
-      var servers = JSON.parse(body);
+      var servers = null;
+      try {
+          servers = JSON.parse(body);
+      } catch (e) {
+       	  console.error(e);
+      }
+      if (!servers || servers.length < 1) {
+          return t.open();
+      }
       var i = -1;
       (function next() {
         i = (i + 1) % servers.length;
