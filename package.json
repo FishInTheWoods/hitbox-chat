@@ -1,6 +1,6 @@
 {
   "name": "hitbox-chat",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A chat client library for smashcast.tv, formerly known as hitbox.tv",
   "author": "ugarcia",
   "license": "BSD-2-Clause",

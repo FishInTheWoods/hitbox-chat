@@ -41,7 +41,7 @@ HitboxChatClient.prototype = {
     if (channel in this.channels) {
       this.channels[channel].onmessage(message);
     } else {
-      throw "Unknown channel " + channel;
+      console.error("Unknown channel " + channel);
     }
   },
   // internal websocket functions
@@ -83,7 +83,8 @@ HitboxChatClient.prototype = {
   // external API functions
   joinChannel: function(channel) {
     if (!this.connected) {
-      throw "WTF";
+      console.error("WTF");
+      return null;
     }
 
     var ch = this.channels[ch];
