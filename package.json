@@ -1,15 +1,15 @@
 {
   "name": "hitbox-chat",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "A chat client library for smashcast.tv, formerly known as hitbox.tv",
   "author": "ugarcia",
   "license": "BSD-2-Clause",
-  "engines": [
-    "node >= 0.10.0"
-  ],
+  "engines": {
+    "node": ">= 8.15.1"
+  },
   "dependencies": {
-    "socket.io-client": "^1.7.0",
-    "request": "~2.40.0"
+    "socket.io-client": "^2.2.0",
+    "request": "^2.88.0"
   },
   "repository": {
     "type": "git",
